@@ -69,30 +69,30 @@ public class SecondPart {
   // --- Enter statement: The function receives the player's current coordinates. ---
   // --- Exit statement: The function returns the minimum number of moves required
   //                     for the player to win the game. ---
-  private static int calcWinningMoves(int playerXloc, int playerYloc) {
+  private static int calcWinningMoves(int xLocPlayer, int yLocPlayer) {
 
     // Optimal coordinates on the WINNERS CARPET.
     // (The coordinates of the nearest point on the WINNERS CARPET to the player's current position)
-    int optimalX = playerXloc;
-    int optimalY = playerYloc;
+    int optimalX = xLocPlayer;
+    int optimalY = yLocPlayer;
 
     // Determine the optimal x-coordinate on the winner's carpet.
-    if (playerXloc < xLocCarpet) {
+    if (xLocPlayer < xLocCarpet) {
       optimalX = xLocCarpet;
-    } else if (playerXloc >= xLocCarpet + carpetSize) {
+    } else if (xLocPlayer >= xLocCarpet + carpetSize) {
       optimalX = xLocCarpet + carpetSize - 1;
     }
 
     // Determine the optimal y-coordinate on the winner's carpet.
-    if (playerYloc < yLocCarpet) {
+    if (yLocPlayer < yLocCarpet) {
       optimalY = yLocCarpet;
-    } else if (playerYloc > yLocCarpet + carpetSize) {
+    } else if (yLocPlayer > yLocCarpet + carpetSize) {
       optimalY = yLocCarpet + carpetSize - 1;
     }
 
     // Calculate the Manhattan distance between the optimal point on the carpet and the current
     // position.
-    return Math.abs(optimalX - playerXloc) + Math.abs(optimalY - playerYloc);
+    return Math.abs(optimalX - xLocPlayer) + Math.abs(optimalY - yLocPlayer);
   }
 
   // ------------------------------------------------------------------------------
