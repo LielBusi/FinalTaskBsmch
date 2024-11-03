@@ -166,6 +166,7 @@ public class FirstPart {
   // --- Exit statement: Returns true if the given coordinates are within the
   //     boundaries of the WINNERS CARPET, otherwise false. ---
   public static boolean isOnWinnersCarpet(int xIndex, int yIndex) {
+
     return (xIndex >= xLocCarpet && xIndex < xLocCarpet + carpetSize)
         && (yIndex >= yLocCarpet && yIndex < yLocCarpet + carpetSize);
   }
@@ -265,6 +266,7 @@ public class FirstPart {
       default:
         // Handle invalid movement direction
         System.out.println(BAD_INPUT_ERROR);
+
         return;
     }
 
@@ -284,6 +286,7 @@ public class FirstPart {
   // --- Exit statement: Returns true if the player is on the WINNERS CARPET,
   //                     indicating a win. Otherwise, returns false.
   private static boolean didPlayerWin(int playerXLoc, int playerYLoc) {
+
     return isOnWinnersCarpet(playerXLoc, playerYLoc);
   }
 

@@ -65,7 +65,6 @@ public class SecondPart {
 
   // ------------------------------------------------------------------------------
 
-
   // --- Enter statement: The function receives the player's current coordinates. ---
   // --- Exit statement: The function returns the minimum number of moves required
   //                     for the player to win the game. ---
@@ -172,6 +171,7 @@ public class SecondPart {
   // --- Exit statement: Returns true if the given coordinates are within the
   //     boundaries of the WINNERS CARPET, otherwise false. ---
   public static boolean isOnWinnersCarpet(int xIndex, int yIndex) {
+
     return (xIndex >= xLocCarpet && xIndex < xLocCarpet + carpetSize)
         && (yIndex >= yLocCarpet && yIndex < yLocCarpet + carpetSize);
   }
