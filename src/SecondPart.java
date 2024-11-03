@@ -53,7 +53,7 @@ public class SecondPart {
     // Note: The first player to play has the advantage of going first and will win
     //       if both players require the same number of moves.
     //       I'll assume there is no need to consider this fact based on
-    //       the assignment requirements.
+    //       the assignment requirements
     if (aMinWinningMoves < bMinWinningMoves) {
       System.out.println("A player has the better chance");
     } else if (aMinWinningMoves > bMinWinningMoves) {
